@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#000A15">
+    <title>birdonathree - ThreeJS Playground under development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/colors.css">
+    <link rel="stylesheet" href="./styles/animations.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/div-expand.css">
+    <script src="https://kit.fontawesome.com/df3e6f116a.js" crossorigin="anonymous"></script>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/div-expander.js" defer></script>
+
+    <style>
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 42px;
+            z-index: 2;
+            color: var(--secondary);
+            display: none;
+        }
+        .arrow:hover {
+            color: var(--secondary);
+        }
+        .arrow-left {
+            left: 15px;
+        }
+        .arrow-right {
+            right: 15px;
+        }
+    </style>
+</head>
+
+<body class="load">
+
+    <main>
+    
+        <section class="hero">
+
+            <canvas id="starfield-canvas"></canvas>
+
+            <div class="container">
+
+                <div class="hero-intro">
+
+                    <h2 class="gradient">
+                        ThreeJS
+                    </h2>
+                    <h2 class="gradient">
+                        Learning
+                    </h2>
+                    <p class="subtitle">
+                        Work in progress concept demo,<br> v2.1 pre-release final revisit beta. 
+                        <br>
+                    </p>
+                    <!-- <div class="cta-buttons">
+
+                        <a href="" id="allprojects" class="btn cta-button">All Projects 👇</a>
+                    
+                        <a id="about" class="btn cta-button">About 👇</a>
+
+                    </div> -->
+                </div>
+
+                <h3 class="gradient">Recent Projects</h3>
+
+                <!-- exp box -->
+                <div class="expanding-box-container">
+
+                    <div id="zoomToImage1" class="inside-box" data-id="1">
+                        <div class="main-info">
+                            <h3>#1</h3>
+                            <p>Messier 81 Galaxy</p>
+                            <h3 class="gradient">Galaxy</h3>
+                            <ul>
+                                <li>Galaxy</li>
+                                <li>Space</li>
+                                <li>Universe</li>
+                            </ul>
+                        </div>
+                        <div class="extra-info">
+                            <p>
+                                The perfectly picturesque spiral galaxy known as Messier 81, or M81, looks sharp in this new composite from NASA Spitzer and Hubble space telescopes and NASA Galaxy Evolution Explorer.
+                            </p>
+                            <div>
+                                <a href="https://images.nasa.gov/details/PIA09579" class="btn">Read.</a>
+                                <a href="" class="btn">View.</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="zoomToImage2" class="inside-box" data-id="2">
+                        <div class="main-info">
+                            <h3>#2</h3>
+                            <p>Dwarf galaxy NGC 4214</p>
+                            <h3 class="gradient">Dwarf</h3>
+                            <ul>
+                                <li>Galaxy</li>
+                                <li>Space</li>
+                                <li>Universe</li>
+                            </ul>
+                        </div>
+                        <div class="extra-info">
+                            <p>
+                                The dwarf galaxy NGC 4214 is ablaze with young stars and gas clouds. Located around 10 million light-years away in the constellation of Canes Venatici (The Hunting Dogs), the galaxy's close proximity, combined with the wide variety of evolutionary stages among the stars, make it an ideal laboratory to research the triggers of star formation and evolution.
+                            </p>
+                            <div>
+                                <a href="https://images.nasa.gov/details/GSFC_20171208_Archive_e001894" class="btn">Read.</a>
+                                <a href="" class="btn">View.</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="zoomToImage3" class="inside-box" data-id="3">
+                        <div class="main-info">
+                            <h3>#3</h3>
+                            <p>One-of-a-Kind Star</p>
+                            <h3 class="gradient">Nasty</h3>
+                            <ul>
+                                <li>Galaxy</li>
+                                <li>Space</li>
+                                <li>Universe</li>
+                            </ul>
+                        </div>
+                        <div class="extra-info">
+                            <p>
+                                Astronomers using NASA’s Hubble Space Telescope have uncovered surprising new clues about a hefty, rapidly aging star whose behavior has never been seen before in our Milky Way galaxy. In fact, the star is so weird that astronomers have nicknamed it “Nasty 1,” a play on its catalog name of NaSt1. The star may represent a brief transitory stage in the evolution of extremely massive stars.
+                            </p>
+                            <div>
+                                <a href="https://images.nasa.gov/details/hubble-observes-one-of-a-kind-star-nicknamed-nasty_17754652960_o" class="btn">Read.</a>
+                                <a href="" class="btn">View.</a>
+                            </div>    
+                        </div>
+                    </div>
+    
+                    <div id="zoomToImage4" class="inside-box" data-id="4">
+                        <div class="main-info">
+                            <h3>#4</h3>
+                            <p>Earth's atmosphere</p>
+                            <h3 class="gradient">Earth</h3>
+                            <ul>
+                                <li>Galaxy</li>
+                                <li>Space</li>
+                                <li>Universe</li>
+                            </ul>
+                        </div>
+                        <div class="extra-info">
+                            <p>
+                                ss070e034016 (Nov. 30, 2023) --- Earth's atmosphere refract's the Moon's light as it sets below the horizon in this photograph from the International Space Station while orbiting 260 miles above the Pacific Ocean.
+                            </p>
+                            <div>
+                                <a href="https://images.nasa.gov/details/PIA14417" class="btn">Read.</a>
+                                <a href="" class="btn">View.</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="zoomToImage5" class="inside-box" data-id="5">
+                        <div class="main-info">
+                            <h3>#5</h3>
+                            <p>Messier 27 Dumbbell</p>
+                            <h3 class="gradient">Nebula</h3>
+                            <ul>
+                                <li>Galaxy</li>
+                                <li>Space</li>
+                                <li>Universe</li>
+                            </ul>
+                        </div>
+                        <div class="extra-info">
+                            <p>
+                                The Dumbbell nebula, also known as Messier 27, pumps out infrared light in this image from NASA Spitzer Space Telescope. Planetary nebulae are now known to be the remains of stars that once looked a lot like our sun.
+                            </p>
+                            <div>
+                                <a href="https://images.nasa.gov/details/iss070e034016" class="btn">Read.</a>
+                                <a href="" class="btn">View.</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="arrow arrow-left"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div class="arrow arrow-right"><i class="fa-solid fa-chevron-right"></i></div>
+                    
+                </div>
+
+                <h3 id="about-contact" class="gradient">Contact</h3>
+
+                <form class="">
+                    <div class="form-container">
+
+                        <span>
+                            Drop a message,&nbsp; 
+                        </span>
+
+                        <span>
+                            ask a question&nbsp;
+                        </span>
+
+                        <a class="btn" href="mailto:hello@madbence.com"><i class="fa-solid fa-envelope"></i> Email</a>
+
+                        <span>
+                        
+                            or</span> 
+
+                        <a class="btn" href="https://linkedin.com/in/madbence"><i class="fa-brands fa-linkedin"></i>&nbsp;LinkedIn</a>
+
+                        <span>
+                            for now.</span> 
+                    </div>
+                </form>
+            </div>
+        
+        </section>
+
+        <footer>
+            <p>Copyright © 2024 - built and designed by <a href="https://github.com/bembit">Me</a></p> 
+            <p>Vanilla ❤️ on Cloudflare</p>
+            <p>Images are from <a href="https://images.nasa.gov/">NASA</a></p>
+        </footer>
+
+    </main>
+    <script type="importmap">
+		{
+		  "imports": {
+			"three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.170.0/three.module.js"
+		  }
+		}
+	</script>
+    <script type="module" src="./starfield.js"></script>
+</body>
+</html>

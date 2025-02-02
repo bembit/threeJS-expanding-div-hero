@@ -1,0 +1,24 @@
+:root {
+    --bg-color: #04010f;
+    --text-color: #f9f9f9;
+
+    --secondary: #4e85cd;
+    --tertiary: #4e85cd;
+
+    --margin-s: 25px;
+    --margin-m: 50px;
+    --margin-l: 85px;
+    --margin-xl: 155px;
+
+    --border-radius: 15px;
+    --border-radius-none: 0px;
+    --border-radius-high: 25px;
+
+    --box-shadow: 0 0 5px 5px rgba(79, 148, 238, 0.534);
+    --box-shadow-big: 0 0 150px 90px rgba(79, 148, 238, 0.1); 
+    --box-shadow-hint: 0 0 25px 5px rgba(79, 148, 238, 0.1);
+    --box-shadow-light: 0 0 125px 25px rgba(79, 148, 238, 0.1);
+
+    --gradient: linear-gradient(180deg, #4fb3e1 0%, #63C2EB 35%, #5b89cf 70%, #824fe1 100%);
+    --gradient-opacity: linear-gradient(90deg, #4fb3e13b 0%, #63c2eb42 35%, #5b89cf2a 70%, #824fe12f 100%);
+}

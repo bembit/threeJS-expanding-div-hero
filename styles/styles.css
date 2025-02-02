@@ -1,0 +1,250 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.load {
+    display: none;
+}
+
+body {
+    font-family: "Orbitron", serif;
+    width: 100%;
+    color: #fff;
+    background-color: var(--bg-color);
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+form .btn {
+    display: inline-block;
+}
+
+nav, footer, p {
+    font-family: Mulish;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    width: 100%;
+    padding: 0 25%;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.btn {
+    font-size: 16px;
+    font-weight: 900;
+    border: 3px solid transparent;
+    color: var(--bg-color);
+    padding: 8px 16px;
+    background-color: var(--text-color);
+    border-radius: var(--border-radius--none);
+    transition: all 0.3s ease-in-out;
+    animation: glow 2s infinite;
+    display: inline-block;
+    z-index: 2;
+}
+
+.btn:not(form .btn) {
+    margin-top: var(--margin-m);
+    margin-bottom:var(--margin-m);
+}
+
+.btn:hover {
+    background-image: none;
+    border: 3px solid transparent;
+    color: var(--text-color);
+    background-color: var(--secondary);
+    cursor: pointer;
+}
+
+footer {
+    border-top: 2px solid var(--tertiary);
+    width: 100%;
+    background-color: transparent;
+    height: 75px;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25%;
+    z-index: 100;
+}
+
+footer a {
+    color: var(--tertiary);
+    text-decoration: underline;
+}
+
+.hero {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.hero .subtitle {
+    font-size: 18px;
+    font-weight: 700;
+    max-width: 375px;
+    line-height: 1.7;
+    text-align: left;
+    align-self: baseline;
+
+    margin-top: 15px;
+}
+
+.subtitle::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    box-shadow: var(--box-shadow-big);
+}
+
+.hero-image.fade-out {
+    opacity: 0;
+}
+
+img.hero-image-logo {
+    max-height: initial;
+    width: 50%;
+    border: none;
+}
+
+.hero form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 800px;
+    border: 2px solid rgba(79, 225, 149, 0.25);
+    background-image: var(--gradient-opacity);
+    padding: 25px 45px;
+    border-radius: var(--border-radius--none);
+    margin-top: 10px;
+    margin-bottom: var(--margin-xl);
+    gap: 5px;
+    box-shadow: var(--box-shadow);
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form span {
+    display: inline-block;
+    font-weight: 700;
+}
+
+form .btn {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.gradient {
+    background-image: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+.gradient-slow {
+    animation: gradientAnimation 25s ease infinite;
+}
+
+h2 {
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 1000;
+    text-align: left;
+    align-self: baseline;
+}
+
+h3 {
+    font-size: 38px;
+    font-style: normal;
+    align-self: baseline;
+    font-weight: 1000;
+    margin-top: var(--margin-s);
+    margin-bottom: var(--margin-s);
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.hero .hero-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--margin-l);
+    margin-bottom: var(--margin-l);
+}
+
+.hero .titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1900px) {
+    section, footer {
+        padding: 0 22%;
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    section , footer {
+        padding: 0 20%;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    section , footer {
+        padding: 0 18%;
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    section, footer {
+        padding: 0 15%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    section, header, footer {
+        padding: 0 8%;
+    }
+}
